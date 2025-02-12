@@ -1,4 +1,4 @@
-.headerNavList {
+.headerNavLeftList {
   composes: noListStyle from "./common.module.css";
   display: flex;
   justify-content: center;

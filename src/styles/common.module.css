@@ -1,17 +1,15 @@
 :global(*) {
   font-family: "Switzer", sans-serif;
+  font-size: 16px;
   color: #333;
   background-color: #FFFBF7;
+  text-decoration: none;
 }
 
 .noListStyle {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.noTextDecoration {
-  text-decoration: none;
 }
 
 .noBorder {
@@ -21,4 +19,8 @@
 .iconCenter {
   display: flex;
   align-items: center;
+}
+
+.displayNone {
+  display: none;
 }

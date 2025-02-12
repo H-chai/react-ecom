@@ -1,0 +1,14 @@
+.headerNavMiddleList {
+  composes: noListStyle displayNone from "./common.module.css";
+  justify-content: center;
+  gap: 24px;
+  font-weight: 500;
+}
+
+@media screen and (min-width:1025px) {
+
+  .headerNavMiddleList {
+    display: flex;
+  }
+
+}

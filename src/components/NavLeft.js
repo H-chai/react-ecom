@@ -3,19 +3,19 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import styles from "../styles/Nav.module.css";
+import styles from "../styles/NavLeft.module.css";
 
-export function Nav() {
+export function NavLeft() {
   return (
     <nav>
-      <ul className={styles.headerNavList}>
+      <ul className={styles.headerNavLeftList}>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navListItem}>
+          <NavLink to="#" className={styles.navListItem}>
             <PersonOutlineOutlinedIcon></PersonOutlineOutlinedIcon>
           </NavLink>
         </li>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navListItem}>
+          <NavLink to="#" className={styles.navListItem}>
             <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
           </NavLink>
         </li>

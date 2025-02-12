@@ -6,10 +6,12 @@
   font-size: 12px;
 }
 
-.footerLink {
-  composes: noTextDecoration from "./common.module.css";
-}
-
 .footerPadding {
   padding: 24px 0;
+}
+
+@media screen and (min-width:1025px) {
+  .footerPadding {
+    padding: 16px 0;
+  }
 }

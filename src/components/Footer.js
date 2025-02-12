@@ -7,14 +7,10 @@ export function Footer() {
       <nav>
         <ul className={styles.footerList}>
           <li>
-            <Link to="#" className={styles.footerLink}>
-              Terms of Use
-            </Link>
+            <Link to="#">Terms of Use</Link>
           </li>
           <li>
-            <Link to="#" className={styles.footerLink}>
-              Privacy Policy
-            </Link>
+            <Link to="#">Privacy Policy</Link>
           </li>
         </ul>
       </nav>
