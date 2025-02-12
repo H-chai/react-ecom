@@ -1,0 +1,15 @@
+.headerNavList {
+  composes: noListStyle from "./common.module.css";
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.navListItem {
+  composes: iconCenter from "./common.module.css";
+}
+
+.navButton {
+  composes: noBorder iconCenter from "./common.module.css";
+  padding: 0;
+}

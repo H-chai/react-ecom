@@ -13,3 +13,12 @@
 .noTextDecoration {
   text-decoration: none;
 }
+
+.noBorder {
+  border: none;
+}
+
+.iconCenter {
+  display: flex;
+  align-items: center;
+}
