@@ -1,0 +1,15 @@
+:global(*) {
+  font-family: "Switzer", sans-serif;
+  color: #333;
+  background-color: #FFFBF7;
+}
+
+.noListStyle {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.noTextDecoration {
+  text-decoration: none;
+}

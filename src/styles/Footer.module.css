@@ -1,0 +1,15 @@
+.footerList {
+  composes: noListStyle from "./common.module.css";
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 12px;
+}
+
+.footerLink {
+  composes: noTextDecoration from "./common.module.css";
+}
+
+.footerPadding {
+  padding: 24px 0;
+}
