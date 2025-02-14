@@ -3,7 +3,16 @@
   display: flex;
   justify-content: center;
   gap: 24px;
+} 
+
+.footerList a {
   font-size: 12px;
+  color: #333;
+  transition: text-decoration .5s ease;
+}
+
+.footerList a:hover {
+  text-decoration: underline;
 }
 
 .footerPadding {

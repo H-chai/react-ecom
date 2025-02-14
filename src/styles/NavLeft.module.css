@@ -6,7 +6,8 @@
 }
 
 .navListItem {
-  composes: iconCenter from "./common.module.css";
+  transition: color .4s ease;
+  composes: hoverRed from "./common.module.css";
 }
 
 .navButton {

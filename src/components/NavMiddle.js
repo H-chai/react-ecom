@@ -6,13 +6,17 @@ export function NavMiddle() {
     <nav>
       <ul className={styles.headerNavMiddleList}>
         <li>
-          <NavLink to="#">Shop </NavLink>
+          <NavLink to="#" className={styles.navMiddleLink}>
+            Shop
+          </NavLink>
         </li>
         <li>
-          <NavLink to="#">About </NavLink>
+          <NavLink to="#" className={styles.navMiddleLink}>
+            About{" "}
+          </NavLink>
         </li>
         <li>
-          <NavLink>Contact </NavLink>
+          <NavLink className={styles.navMiddleLink}>Contact </NavLink>
         </li>
       </ul>
     </nav>

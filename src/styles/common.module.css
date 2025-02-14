@@ -1,7 +1,6 @@
 :global(*) {
   font-family: "Switzer", sans-serif;
   font-size: 16px;
-  color: #333;
   background-color: #FFFBF7;
   text-decoration: none;
 }
@@ -23,4 +22,10 @@
 
 .displayNone {
   display: none;
+}
+
+.hoverRed {
+  &:hover {
+    color: #F24738;
+  }
 }

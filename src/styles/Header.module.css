@@ -5,6 +5,10 @@
   padding: 16px 24px;
 }
 
+.headerElements a {
+  color: #333;
+}
+
 .logo {
   width: 72px;
 }
