@@ -7,10 +7,7 @@
 
 .navListItem {
   transition: color .4s ease;
+  display: flex;
+  align-items: center;
   composes: hoverRed from "./common.module.css";
-}
-
-.navButton {
-  composes: noBorder iconCenter from "./common.module.css";
-  padding: 0;
 }

@@ -3,6 +3,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import commonStyles from "../styles/common.module.css";
 import styles from "../styles/NavLeft.module.css";
 
 export function NavLeft() {
@@ -25,7 +26,7 @@ export function NavLeft() {
           </NavLink>
         </li>
         <li>
-          <button className={styles.navButton}>
+          <button className={commonStyles.button}>
             <MenuOutlinedIcon></MenuOutlinedIcon>
           </button>
         </li>
