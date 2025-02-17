@@ -8,6 +8,7 @@
 
 .layoutPadding {
   padding: 0 24px;
+  overflow: hidden;
 }
 
 .noListStyle {
@@ -40,5 +41,11 @@
 .hoverRed {
   &:hover {
     color: #F24738;
+  }
+}
+
+@media screen and (min-width:1025px) {
+  .layoutPadding {
+    padding: 0 40px;
   }
 }

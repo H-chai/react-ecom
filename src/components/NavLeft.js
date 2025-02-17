@@ -25,7 +25,7 @@ export function NavLeft() {
             <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
           </NavLink>
         </li>
-        <li>
+        <li className={commonStyles.displayNone}>
           <button className={commonStyles.button}>
             <MenuOutlinedIcon></MenuOutlinedIcon>
           </button>

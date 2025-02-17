@@ -1,6 +1,7 @@
 import { useApi } from "../hooks/useApi";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "../styles/Home.module.css";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const url = "https://v2.api.noroff.dev/online-shop";
@@ -32,28 +33,38 @@ export function Home() {
             <button>Fashion</button>
           </li>
           <li className={styles.categoryListItem}>
-            <button>Electronics</button>
+            <button>Beauty</button>
           </li>
           <li className={styles.categoryListItem}>
-            <button>Beauty</button>
+            <button>Electronics</button>
           </li>
           <li className={styles.categoryListItem}>
             <button>Toy</button>
           </li>
         </ul>
       </div>
-      {products.map((product) => (
-        <div key={product.id}>
-          <img src={product.image.url} alt={product.image.alt} />
-          <p>{product.title}</p>
-          <div>
-            <p>{product.discountedPrice}</p>
-            <p>
-              {product.price === product.discountedPrice ? "" : product.price}
-            </p>
-          </div>
-        </div>
-      ))}
+      <div className={styles.productSection}>
+        {products.map((product) => (
+          <Link
+            key={product.id}
+            className={styles.product}
+            to={`/product/${product.id}`}
+          >
+            <img src={product.image.url} alt={product.image.alt} />
+            <p className={styles.productTitle}>{product.title}</p>
+            <div className={styles.price}>
+              <p className={styles.discountedPrice}>
+                ${product.discountedPrice}
+              </p>
+              <p className={styles.originalPrice}>
+                {product.price === product.discountedPrice
+                  ? ""
+                  : `$${product.price}`}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
