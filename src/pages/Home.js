@@ -1,6 +1,6 @@
 import { useApi } from "../hooks/useApi";
-import styles from "../styles/common.module.css";
 import SearchIcon from "@mui/icons-material/Search";
+import styles from "../styles/Home.module.css";
 
 export function Home() {
   const url = "https://v2.api.noroff.dev/online-shop";
@@ -15,27 +15,29 @@ export function Home() {
   }
 
   return (
-    <div>
-      <div>
-        <SearchIcon></SearchIcon>
-        <input type="text" name="" id="" placeholder="search" />
+    <div className={styles.homeContainer}>
+      <div className={styles.searchBarContainer}>
+        <button className={styles.searchButton}>
+          <SearchIcon></SearchIcon>
+        </button>
+        <input type="text" name="" id="" placeholder="Search" />
       </div>
-      <div>
+      <div className={styles.categorySection}>
         <h2>Categories</h2>
-        <ul className={styles.noListStyle}>
-          <li>
+        <ul className={styles.categoryList}>
+          <li className={styles.categoryListItem}>
             <button>All</button>
           </li>
-          <li>
+          <li className={styles.categoryListItem}>
             <button>Fashion</button>
           </li>
-          <li>
+          <li className={styles.categoryListItem}>
             <button>Electronics</button>
           </li>
-          <li>
+          <li className={styles.categoryListItem}>
             <button>Beauty</button>
           </li>
-          <li>
+          <li className={styles.categoryListItem}>
             <button>Toy</button>
           </li>
         </ul>

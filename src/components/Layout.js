@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import styles from "../styles/common.module.css";
 
 export function Layout() {
   return (
-    <div>
+    <div className={styles.layoutPadding}>
       <Header />
       <Outlet />
       <Footer />

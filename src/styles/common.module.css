@@ -1,8 +1,13 @@
 :global(*) {
   font-family: "Switzer", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
   background-color: #FFFBF7;
   text-decoration: none;
+}
+
+.layoutPadding {
+  padding: 0 24px;
 }
 
 .noListStyle {
@@ -11,8 +16,16 @@
   margin: 0;
 }
 
-.noBorder {
+.button {
   border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  svg {
+    background-color: inherit;
+  }
 }
 
 .iconCenter {
