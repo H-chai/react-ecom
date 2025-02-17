@@ -26,7 +26,7 @@ input:focus-visible {
 
 input::placeholder {
   font-size: 14px;
-  line-height: 1.5;
+  font-weight: 500;
   color: #9AA0A6;
 }
 
@@ -139,12 +139,21 @@ h2 {
 
 .product {
   color: #333;
-  
+  overflow: hidden;
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+  }
+
   img {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform .5s ease-in-out;
   }
 
   .productTitle {
@@ -172,4 +181,85 @@ h2 {
       text-decoration: line-through;
     }
   }
+}
+
+@media screen and (min-width:767px) {
+  .productSection {
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+  }
+}
+
+@media screen and (min-width:1025px) {
+  .homeContainer {
+    padding-top: 56px;
+    padding-bottom: 128px;
+  }
+
+  .searchBarContainer {
+    width: 50%;
+    margin: 0 auto 48px auto;
+    padding: 10px;
+  }
+
+  input {
+    padding: 0 32px;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+  }
+
+  .searchButton svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .categorySection {
+    margin-bottom: 56px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .categoryList {
+    gap: 16px;
+  
+    button {
+      font-size: 16px;
+    }
+  }
+
+  .productSection {
+    grid-template-columns: repeat(5, minmax(0px, 1fr));
+    column-gap: 24px;
+    row-gap: 56px;
+  }
+
+  .product {
+
+    .productTitle {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .price {
+      gap: 10px;
+  
+      .discountedPrice {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .originalPrice {
+        font-size: 16px;
+      }
+      
+    }
+  }
+
+  .product:hover img {
+    transform: scale(1.05);
+  }
+
 }

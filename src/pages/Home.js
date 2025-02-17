@@ -50,7 +50,9 @@ export function Home() {
             className={styles.product}
             to={`/product/${product.id}`}
           >
-            <img src={product.image.url} alt={product.image.alt} />
+            <figure>
+              <img src={product.image.url} alt={product.image.alt} />
+            </figure>
             <p className={styles.productTitle}>{product.title}</p>
             <div className={styles.price}>
               <p className={styles.discountedPrice}>

@@ -11,3 +11,14 @@
   align-items: center;
   composes: hoverRed from "./common.module.css";
 }
+
+.hamburgerIcon {
+  display: block;
+}
+
+@media screen and (min-width:1025px) {
+  
+  .hamburgerIcon {
+    display: none;
+  }
+}
