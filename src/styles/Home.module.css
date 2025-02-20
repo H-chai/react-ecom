@@ -12,10 +12,19 @@
   padding: 8px;
   position: relative;
   margin-bottom: 32px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.cursorPointer {
+  cursor: pointer;
 }
 
 input {
-  padding: 0 24px;
+  padding: 0 6px;
   border: none;
   width: 100%;
 }
@@ -28,18 +37,6 @@ input::placeholder {
   font-size: 14px;
   font-weight: 500;
   color: #9AA0A6;
-}
-
-.searchButton {
-  composes: button from "../styles/common.module.css";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.searchButton svg {
-  width: 20px;
-  height: 20px;
 }
 
 .categorySection {
@@ -160,16 +157,11 @@ h2 {
   }
 
   input {
-    padding: 0 32px;
+    padding: 0 8px;
   }
 
   input::placeholder {
     font-size: 16px;
-  }
-
-  .searchButton svg {
-    width: 24px;
-    height: 24px;
   }
 
   .categorySection {
