@@ -59,7 +59,7 @@ h2 {
   row-gap: 8px;
   column-gap: 12px;
   
-  a {
+  .categoryListItem {
     border-radius: 8px;
     white-space: nowrap;
     padding: 8px 16px;
@@ -67,13 +67,25 @@ h2 {
     font-weight: 500;
     color: #333;
     border: solid 1px #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
   
-  :global(.active) {
+  .categoryListItem:global(.active) {
     color: #fff;
     background-color: #F24738;
     border: solid 1px #F24738;
     font-weight: 600;
+    cursor: default;
   }
 }
 .productSection {
