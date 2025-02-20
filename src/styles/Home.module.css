@@ -58,7 +58,7 @@ h2 {
   align-items: center;
   row-gap: 8px;
   column-gap: 12px;
-
+  
   a {
     border-radius: 8px;
     white-space: nowrap;
@@ -68,9 +68,14 @@ h2 {
     color: #333;
     border: solid 1px #333;
   }
-
+  
+  :global(.active) {
+    color: #fff;
+    background-color: #F24738;
+    border: solid 1px #F24738;
+    font-weight: 600;
+  }
 }
-
 .productSection {
   display: grid;
   grid-template-columns: repeat(2, minmax(0px, 1fr));
@@ -165,7 +170,7 @@ h2 {
 
   .categoryList {
   
-    button {
+    a {
       font-size: 16px;
     }
   }
