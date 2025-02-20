@@ -2,10 +2,11 @@ import { useApi } from "../hooks/useApi";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "../styles/Home.module.css";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function Home() {
   const url = "https://v2.api.noroff.dev/online-shop";
-  const { data: products, isLoading, isError } = useApi(url);
+  const { data: products, isLoading, isError, tagsArray } = useApi(url);
 
   if (isLoading) {
     return <div>loading</div>;
@@ -14,6 +15,7 @@ export function Home() {
   if (isError) {
     return <div>Error: {isError}</div>;
   }
+  console.log(tagsArray);
 
   return (
     <div className={styles.homeContainer}>
@@ -26,21 +28,12 @@ export function Home() {
       <div className={styles.categorySection}>
         <h2>Categories</h2>
         <ul className={styles.categoryList}>
-          <li className={styles.categoryListItem}>
-            <button>All</button>
-          </li>
-          <li className={styles.categoryListItem}>
-            <button>Fashion</button>
-          </li>
-          <li className={styles.categoryListItem}>
-            <button>Beauty</button>
-          </li>
-          <li className={styles.categoryListItem}>
-            <button>Electronics</button>
-          </li>
-          <li className={styles.categoryListItem}>
-            <button>Toy</button>
-          </li>
+          <NavLink className={styles.categoryListItem}>All</NavLink>
+          {tagsArray.map((tag) => (
+            <NavLink key={tag} className={styles.categoryListItem}>
+              {tag}
+            </NavLink>
+          ))}
         </ul>
       </div>
       <div className={styles.productSection}>

@@ -54,80 +54,21 @@ h2 {
 .categoryList {
   composes: noListStyle from "../styles/common.module.css";
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  overflow-x: scroll;
-  scrollbar-width: none;
+  row-gap: 8px;
+  column-gap: 12px;
 
-  li {
+  a {
     border-radius: 8px;
-  }
-
-  button {
+    white-space: nowrap;
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 500;
-    border-radius: inherit;
+    color: #333;
+    border: solid 1px #333;
   }
-}
 
-.categoryListItem:first-child {
-  color: #fff;
-  background-color: #F24738;
-
-  button {
-    background-color: inherit;
-    color: inherit;
-    border: solid 1px #F24738;
-  }
-}
-
-.categoryListItem:nth-child(2) {
-  color: #F24738;
-  background-color: #fff;
-
-
-  button {
-    background-color: inherit;
-    color: inherit;
-    border: solid 1px #F24738;
-  }
-}
-
-.categoryListItem:nth-child(3) {
-  color: #F24738;
-  background-color: #fff;
-
-
-  button {
-    background-color: inherit;
-    color: inherit;
-    border: solid 1px #F24738;
-  }
-}
-
-.categoryListItem:nth-child(4) {
-  color: #DF5E00;
-  background-color: #fff;
-
-
-  button {
-    background-color: inherit;
-    color: inherit;
-    border: solid 1px #DF5E00;
-  }
-}
-
-.categoryListItem:nth-child(5) {
-  color: #008DFF;
-  background-color: #fff;
-
-
-  button {
-    background-color: inherit;
-    color: inherit;
-    border: solid 1px #008DFF;
-  }
 }
 
 .productSection {
@@ -223,7 +164,6 @@ h2 {
   }
 
   .categoryList {
-    gap: 16px;
   
     button {
       font-size: 16px;

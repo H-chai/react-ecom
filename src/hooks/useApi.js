@@ -22,5 +22,7 @@ export function useApi(url) {
     getData();
   }, [url]);
 
-  return { data, isLoading, isError };
+  const tags = data.map((d) => d.tags);
+  const tagsArray = [...new Set(tags.flat())];
+  return { data, isLoading, isError, tagsArray };
 }
