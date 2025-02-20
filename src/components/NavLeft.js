@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -11,14 +11,14 @@ export function NavLeft() {
     <nav>
       <ul className={styles.headerNavLeftList}>
         <li className={styles.navListItem}>
-          <NavLink to="#" className={styles.navListItem}>
+          <Link to="#" className={styles.navListItem}>
             <PersonOutlineOutlinedIcon></PersonOutlineOutlinedIcon>
-          </NavLink>
+          </Link>
         </li>
         <li className={styles.navListItem}>
-          <NavLink to="#" className={styles.navListItem}>
+          <Link to="#" className={styles.navListItem}>
             <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
-          </NavLink>
+          </Link>
         </li>
         <li className={styles.navListItem}>
           <NavLink className={styles.navListItem}>

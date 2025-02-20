@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styles from "../styles/NavMiddle.module.css";
 
 export function NavMiddle() {
@@ -6,17 +6,19 @@ export function NavMiddle() {
     <nav>
       <ul className={styles.headerNavMiddleList}>
         <li>
-          <NavLink to="#" className={styles.navMiddleLink}>
+          <Link to="#" className={styles.navMiddleLink}>
             Shop
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="#" className={styles.navMiddleLink}>
-            About{" "}
-          </NavLink>
+          <Link to="#" className={styles.navMiddleLink}>
+            About
+          </Link>
         </li>
         <li>
-          <NavLink className={styles.navMiddleLink}>Contact </NavLink>
+          <NavLink to="/contact" className={styles.navMiddleLink}>
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
