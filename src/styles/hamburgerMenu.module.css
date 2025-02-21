@@ -1,0 +1,40 @@
+.hamburgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: #F24738;
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out;
+}
+
+.hamburgerMenuList {
+  list-style: none;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 128px 0 0 0 ;
+  gap: 40px;
+
+  li, a {
+    background-color: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .hamburgerMenuLink {
+    color: #fff;
+  }
+}
+
+.closeIcon {
+  color: #fff;
+}
+
+.open {
+  transform: translateX(0%);
+}

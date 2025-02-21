@@ -5,8 +5,17 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import commonStyles from "../styles/common.module.css";
 import styles from "../styles/NavLeft.module.css";
+import { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import menuStyles from "../styles/hamburgerMenu.module.css";
 
 export function NavLeft() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleHamburgerMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
+
   return (
     <nav>
       <ul className={styles.headerNavLeftList}>
@@ -26,9 +35,44 @@ export function NavLeft() {
           </NavLink>
         </li>
         <li className={styles.hamburgerIcon}>
-          <button className={commonStyles.button}>
-            <MenuOutlinedIcon></MenuOutlinedIcon>
-          </button>
+          {isMenuOpen ? (
+            <button
+              className={commonStyles.button}
+              onClick={toggleHamburgerMenu}
+            >
+              <CloseIcon className={menuStyles.closeIcon}></CloseIcon>
+            </button>
+          ) : (
+            <button
+              className={commonStyles.button}
+              onClick={toggleHamburgerMenu}
+            >
+              <MenuOutlinedIcon></MenuOutlinedIcon>
+            </button>
+          )}
+          <nav
+            className={`${menuStyles.hamburgerMenu} ${
+              isMenuOpen ? menuStyles.open : ""
+            }`}
+          >
+            <ul className={menuStyles.hamburgerMenuList}>
+              <li className={menuStyles.hamburgerMenuListItem}>
+                <Link to="#" className={menuStyles.hamburgerMenuLink}>
+                  Shop
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={menuStyles.hamburgerMenuLink}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <NavLink to="/contact" className={menuStyles.hamburgerMenuLink}>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
         </li>
       </ul>
     </nav>
