@@ -92,6 +92,16 @@ h2 {
   row-gap: 32px;
 }
 
+.noProductText {
+  width: 100%;
+  font-size: 16px;
+}
+
+.highlight {
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .product {
   color: #333;
   overflow: hidden;
