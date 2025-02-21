@@ -29,6 +29,7 @@ export function Home() {
   function onCategoryClick(event) {
     event.preventDefault();
     const category = event.target.textContent;
+    setInputText("");
 
     if (!selectedCategories.includes(category)) {
       setSelectedCategories((prevSelectedCategories) => [
