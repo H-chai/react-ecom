@@ -114,20 +114,6 @@
   margin-bottom: 0;
 }
 
-/* .backHome {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-
-  svg {
-    width: 18px;
-    height: 18px;
-    margin-right: 4px;
-  }
-} */
-
 @media screen and (min-width:767px) {
   .productContainer {
     display: grid;
