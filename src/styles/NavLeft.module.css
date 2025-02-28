@@ -10,10 +10,29 @@
   display: flex;
   align-items: center;
   composes: hoverRed from "./common.module.css";
+  position: relative;
 }
 
 .hamburgerIcon {
   display: block;
+}
+
+.itemNumber {
+  background-color: #F24738;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  margin: 0;
+  padding: 2px;
+  position: absolute;
+  top: -30%;
+  right: -40%;
 }
 
 @media screen and (min-width:1025px) {
