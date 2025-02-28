@@ -74,7 +74,7 @@
 
   h2 {
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     padding-bottom: 16px;
     border-bottom: solid 1px #EBEBEB;
   }
@@ -82,8 +82,8 @@
 
 .review {
   border-bottom: solid 1px #EBEBEB;
+  padding-top: 24px;
   padding-bottom: 24px;
-  margin-bottom: 40px;
 }
 
 .reviewer {
@@ -175,10 +175,6 @@
     h2 {
       font-weight: 700;
     }
-  }
-
-  .review {
-    margin-bottom: 64px;
   }
   
   .rating {
