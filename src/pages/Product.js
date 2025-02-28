@@ -5,11 +5,14 @@ import { Link } from "react-router-dom";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import styles from "../styles/Product.module.css";
+import { useCartStore } from "../store/cartStore";
 
 export function Product() {
   let { id } = useParams();
   const url = `https://v2.api.noroff.dev/online-shop/${id}`;
   const { data, isLoading, isError } = useApi(url);
+
+  const addToCart = useCartStore((state) => state.addToCart);
 
   if (isLoading) {
     return <div>loading</div>;
@@ -36,7 +39,9 @@ export function Product() {
           </div>
         </div>
         <p className={styles.description}>{data.description}</p>
-        <button className={styles.addToCart}>Add to cart</button>
+        <button onClick={() => addToCart(data)} className={styles.addToCart}>
+          Add to cart
+        </button>
         <div className={styles.reviewSection}>
           <h2>Reviews ({data.reviews?.length})</h2>
           {data.reviews?.map((review) => (
