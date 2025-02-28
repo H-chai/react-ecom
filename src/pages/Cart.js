@@ -2,6 +2,10 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import { useCartStore } from "../store/cartStore";
+import styles from "../styles/Cart.module.css";
+import { Link } from "react-router-dom";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import commonStyles from "../styles/common.module.css";
 
 export function Cart() {
   const { cart, removeFromCart, addQuantity, subtractQuantity } =
@@ -13,56 +17,84 @@ export function Cart() {
   );
 
   return (
-    <div>
-      <h2>Cart</h2>
+    <div className={styles.pageContainer}>
+      <h2 className={styles.cartTitle}>Cart</h2>
       <div>
         {cart.length === 0 ? (
           <div>
-            <h3>Your shopping cart is empty.</h3>
+            <h3 className={styles.messageTitle}>
+              Your shopping cart is empty.
+            </h3>
             <p>
               When you add products to your shopping bag, they will appear here.
             </p>
           </div>
         ) : (
-          <div>
-            {cart.map((product) => (
-              <div key={product.id}>
-                <figure>
-                  <img src={product.image.url} alt={product.image.alt} />
-                </figure>
-                <p>{product.title}</p>
-                <div>
-                  <div>
-                    <p>
-                      {product.price === product.discountedPrice
-                        ? ""
-                        : `$${product.price}`}
-                    </p>
-                    <p>${product.discountedPrice}</p>
-                  </div>
-                  <div>
-                    <button onClick={() => subtractQuantity(product.id)}>
-                      <RemoveIcon></RemoveIcon>
-                    </button>
-                    <p>{product.quantity}</p>
-                    <button onClick={() => addQuantity(product.id)}>
-                      <AddIcon></AddIcon>
+          <div className={styles.cartContainer}>
+            <div className={styles.contentGrid}>
+              {cart.map((product) => (
+                <div key={product.id} className={styles.cartItemContainer}>
+                  <Link to={`/product/${product.id}`} className={styles.figure}>
+                    <figure>
+                      <img src={product.image.url} alt={product.image.alt} />
+                    </figure>
+                  </Link>
+                  <div className={styles.productDetail}>
+                    <Link
+                      to={`/product/${product.id}`}
+                      className={styles.productTitle}
+                    >
+                      {product.title}
+                    </Link>
+                    <div className={styles.priceQuantity}>
+                      <div>
+                        <p className={styles.originalPrice}>
+                          {product.price === product.discountedPrice
+                            ? ""
+                            : `$${product.price}`}
+                        </p>
+                        <p className={styles.discountedPrice}>
+                          ${product.discountedPrice}
+                        </p>
+                      </div>
+                      <div className={styles.quantity}>
+                        <button onClick={() => subtractQuantity(product.id)}>
+                          <RemoveIcon></RemoveIcon>
+                        </button>
+                        <p>{product.quantity}</p>
+                        <button onClick={() => addQuantity(product.id)}>
+                          <AddIcon></AddIcon>
+                        </button>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => removeFromCart(product.id)}
+                      className={styles.removeButton}
+                    >
+                      <CloseIcon></CloseIcon>
                     </button>
                   </div>
                 </div>
-                <button onClick={() => removeFromCart(product.id)}>
-                  <CloseIcon></CloseIcon>
-                </button>
-              </div>
-            ))}
-            <div>
-              <p>Total</p>
-              <p>${totalCost.toFixed(2)}</p>
+              ))}
             </div>
-            <button>Checkout</button>
+            <div className={styles.totalGrid}>
+              <h3 className={styles.summaryTitle}>Order summary</h3>
+              <div className={styles.summarySubtotal}>
+                <h3>Subtotal</h3>
+                <p className={styles.subtotal}>${totalCost.toFixed(2)}</p>
+              </div>
+              <div className={styles.summaryTotal}>
+                <h3>Total</h3>
+                <p className={styles.total}>${totalCost.toFixed(2)}</p>
+              </div>
+              <button className={styles.checkout}>Checkout</button>
+            </div>
           </div>
         )}
       </div>
+      <Link to="/" className={commonStyles.backHome}>
+        <KeyboardBackspaceIcon></KeyboardBackspaceIcon>See all products
+      </Link>
     </div>
   );
 }

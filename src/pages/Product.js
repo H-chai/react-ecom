@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import styles from "../styles/Product.module.css";
+import commonStyles from "../styles/common.module.css";
 import { useCartStore } from "../store/cartStore";
 
 export function Product() {
@@ -57,7 +58,7 @@ export function Product() {
             </div>
           ))}
         </div>
-        <Link to="/" className={styles.backHome}>
+        <Link to="/" className={commonStyles.backHome}>
           <KeyboardBackspaceIcon></KeyboardBackspaceIcon>See all products
         </Link>
       </div>

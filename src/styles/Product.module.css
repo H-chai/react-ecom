@@ -66,17 +66,7 @@
 }
 
 .addToCart {
-  margin-top: 24px;
-  margin-bottom: 0;
-  width: 100%;
-  border-radius: 50px;
-  border: solid 1px #F24738;
-  background-color: #F24738;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  padding: 12px 0;
+  composes: ctaButton from "../styles/common.module.css"
 }
 
 .reviewSection {
@@ -124,7 +114,7 @@
   margin-bottom: 0;
 }
 
-.backHome {
+/* .backHome {
   text-decoration: none;
   color: #333;
   font-size: 14px;
@@ -136,7 +126,7 @@
     height: 18px;
     margin-right: 4px;
   }
-}
+} */
 
 @media screen and (min-width:767px) {
   .productContainer {
@@ -191,20 +181,6 @@
 
   .description {
     margin-top: 24px;
-  }
-  
-  .addToCart {
-    margin-top: 40px;
-    border: solid 2px #F24738;
-    font-weight: 700;
-    padding: 16px 0;
-    transition: all .3s ease;
-    cursor: pointer;
-  }
-
-  .addToCart:hover {
-    background-color: #FFFBF7;
-    color: #F24738;
   }
 
   .reviewSection {
