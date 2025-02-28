@@ -20,9 +20,10 @@
   top: 16px;
   right: 16px;
   background-color: transparent;
-  width: 28px;
-  height: 28px;
+  width: 28px!important;
+  height: 28px!important;
 }
+
 
 .titlePrice {
   display: flex;
@@ -68,7 +69,7 @@
   margin-top: 24px;
   margin-bottom: 0;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 50px;
   border: solid 1px #F24738;
   background-color: #F24738;
   color: #fff;
@@ -135,4 +136,95 @@
     height: 18px;
     margin-right: 4px;
   }
+}
+
+@media screen and (min-width:767px) {
+  .productContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    padding: 0 40px;
+    margin-top: 80px;
+    margin-bottom: 128px;
+  }
+
+  .figure {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .favorite {
+    top: 24px;
+    right: 24px;
+    width: 32px!important;
+    height: 32px!important;
+  }
+
+  .productDetailContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .titlePrice {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 0;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .prices {
+    gap: 10px;
+    flex-direction: row-reverse;
+  }
+  
+  .originalPrice {
+    font-size: 18px;
+  }
+  
+  .discountedPrice {
+    font-size: 22px;
+  }
+
+  .description {
+    margin-top: 24px;
+  }
+  
+  .addToCart {
+    margin-top: 40px;
+    border: solid 2px #F24738;
+    font-weight: 700;
+    padding: 16px 0;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+
+  .addToCart:hover {
+    background-color: #FFFBF7;
+    color: #F24738;
+  }
+
+  .reviewSection {
+    margin-top: 56px;
+  
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  .review {
+    margin-bottom: 64px;
+  }
+  
+  .rating {
+    font-weight: 600;
+  }
+  
+  .reviewUsername {
+    font-weight: 600;
+  }
+
 }

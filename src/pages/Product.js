@@ -25,7 +25,7 @@ export function Product() {
         <img src={data.image?.url} alt={data.image?.alt} />
         <FavoriteBorderIcon className={styles.favorite}></FavoriteBorderIcon>
       </figure>
-      <div>
+      <div className={styles.productDetailContainer}>
         <div className={styles.titlePrice}>
           <h1 className={styles.title}>{data.title}</h1>
           <div className={styles.prices}>
