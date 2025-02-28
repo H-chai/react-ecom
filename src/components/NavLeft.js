@@ -30,7 +30,7 @@ export function NavLeft() {
           </Link>
         </li>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navListItem}>
+          <NavLink to="/cart" className={styles.navListItem}>
             <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
           </NavLink>
         </li>
