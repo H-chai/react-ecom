@@ -37,7 +37,11 @@ export function NavLeft() {
         <li className={styles.navListItem}>
           <NavLink to="/cart" className={styles.navListItem}>
             <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
-            <p className={styles.itemNumber}>{totalItem}</p>
+            {totalItem > 0 ? (
+              <p className={styles.itemNumber}>{totalItem}</p>
+            ) : (
+              ""
+            )}
           </NavLink>
         </li>
         <li className={styles.hamburgerIcon}>
