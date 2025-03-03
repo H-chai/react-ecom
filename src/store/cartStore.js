@@ -13,12 +13,14 @@ export const useCartStore = create((set) => ({
             : item
         );
         localStorage.setItem("cart", JSON.stringify(updatedCart));
+        alert("The item was added to your shopping cart.");
         return {
           cart: updatedCart,
         };
       } else {
         const updatedCart = [...state.cart, { ...product, quantity: 1 }];
         localStorage.setItem("cart", JSON.stringify(updatedCart));
+        alert("The item was added to your shopping cart.");
         return {
           cart: updatedCart,
         };
@@ -76,5 +78,11 @@ export const useCartStore = create((set) => ({
           cart: updatedCart,
         };
       }
+    }),
+
+  clearCart: () =>
+    set(() => {
+      localStorage.setItem("cart", JSON.stringify([]));
+      return { cart: [] };
     }),
 }));
