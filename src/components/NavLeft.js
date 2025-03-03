@@ -19,7 +19,6 @@ export function NavLeft() {
 
   const { cart } = useCartStore();
   const totalItem = cart.reduce((total, item) => total + item.quantity, 0);
-  console.log(totalItem);
 
   return (
     <nav>

@@ -20,7 +20,7 @@ export function Cart() {
 
   function checkout() {
     clearCart();
-    navigate("/contact");
+    navigate("/checkout-success");
   }
 
   return (
