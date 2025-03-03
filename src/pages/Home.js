@@ -137,9 +137,12 @@ export function Home() {
                 className={styles.product}
                 to={`/product/${product.id}`}
               >
-                <figure>
-                  <img src={product.image.url} alt={product.image.alt} />
-                </figure>
+                <div className={styles.figureContainer}>
+                  <figure>
+                    <img src={product.image.url} alt={product.image.alt} />
+                  </figure>
+                  <div className={styles.hoverLayer}>View product</div>
+                </div>
                 <p className={styles.productTitle}>{product.title}</p>
                 <div className={styles.price}>
                   <p className={styles.discountedPrice}>

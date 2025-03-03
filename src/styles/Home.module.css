@@ -84,6 +84,7 @@ h2 {
     cursor: default;
   }
 }
+
 .productSection {
   display: grid;
   grid-template-columns: repeat(2, minmax(0px, 1fr));
@@ -145,6 +146,27 @@ h2 {
       text-decoration: line-through;
     }
   }
+}
+
+.figureContainer {
+  position: relative;
+}
+
+.hoverLayer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgba(51, 51, 51, .6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 @media screen and (min-width:767px) {
@@ -214,6 +236,10 @@ h2 {
 
   .product:hover img {
     transform: scale(1.05);
+  }
+
+  .product:hover .hoverLayer {
+    opacity: 1;
   }
 
 }
