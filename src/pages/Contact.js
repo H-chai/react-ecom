@@ -3,6 +3,8 @@ import Message from "../message-received.png";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
+import styles from "../styles/Contact.module.css";
+import { Link } from "react-router-dom";
 
 export function Contact() {
   const [message, setMessage] = useState("");
@@ -41,8 +43,16 @@ export function Contact() {
 
   return (
     <div>
-      <h2>Contact</h2>
-      <img src={Message} alt="send message" />
+      <h2 className={styles.contactTitle}>Contact</h2>
+      <img src={Message} alt="send message" className={styles.contactImg} />
+      {message && (
+        <div className={styles.messageContainer}>
+          <p className={styles.successMessage}>{message}</p>
+          <Link to="/" className={styles.toHome}>
+            Back to Home
+          </Link>
+        </div>
+      )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("fullName")} placeholder="Full Name" />
         <p>{errors.fullName?.message}</p>
@@ -50,11 +60,10 @@ export function Contact() {
         <p>{errors.subject?.message}</p>
         <input {...register("email")} placeholder="Email" type="email" />
         <p>{errors.email?.message}</p>
-        <input {...register("body")} placeholder="Message" />
+        <textarea {...register("body")} placeholder="Your message" rows="5" />
         <p>{errors.body?.message}</p>
-        <input type="submit" value="Send" />
+        <input type="submit" value="Send" className={styles.send} />
       </form>
-      {message && <div>{message}</div>}
     </div>
   );
 }

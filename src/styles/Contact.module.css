@@ -1,0 +1,94 @@
+.contactTitle {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.contactImg {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+
+  input, textarea {
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: auto;
+    border: solid 1px #D5D5D5;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: 4px;
+    font-size: 14px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #B2B2B2;
+  }
+}
+
+.send {
+  composes: ctaButton from "../styles/common.module.css"
+}
+
+.messageContainer {
+  text-align: center;
+}
+
+.successMessage {
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.toHome {
+  text-decoration: underline;
+  color: #333;
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+@media screen and (min-width:767px) {
+
+  .contactTitle {
+    margin-bottom: 48px;
+  }
+  
+  .contactImg {
+    width: 20%;
+  }
+
+  form {
+    width: 40%;
+    margin: 24px auto 20px auto;
+
+    input, textarea {
+      padding: 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+  }
+
+  .successMessage {
+    font-size: 22px;
+  }
+
+  .toHome {
+    font-size: 16px;
+  }
+
+}
