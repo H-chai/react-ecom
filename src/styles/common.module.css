@@ -6,9 +6,13 @@
   text-decoration: none;
 }
 
-.layoutPadding {
+.layout {
   padding: 0 24px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .noListStyle {
@@ -92,7 +96,7 @@
 }
 
 @media screen and (min-width:1025px) {
-  .layoutPadding {
+  .layout {
     padding: 0 40px;
   }
 
