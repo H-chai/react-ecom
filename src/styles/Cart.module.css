@@ -13,12 +13,17 @@
     display: block;
     margin: 0 auto;
   }
+
+  p {
+    margin: 0;
+  }
 }
 
 .messageTitle {
   font-size: 18px;
   font-weight: 600;
   margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .cartContainer {
@@ -186,6 +191,10 @@
 
   .cartTitle {
     margin-bottom: 48px;
+  }
+
+  .messageTitle {
+    font-size: 22px;
   }
 }
 
