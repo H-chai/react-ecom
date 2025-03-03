@@ -71,7 +71,7 @@
   font-size: 14px;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 56px;
 
   svg {
     width: 18px;
@@ -102,6 +102,6 @@
   }
 
   .backHome {
-    margin-top: 64px;
+    margin-top: 96px;
   }
 }
