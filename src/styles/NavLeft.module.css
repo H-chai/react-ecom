@@ -1,0 +1,24 @@
+.headerNavLeftList {
+  composes: noListStyle from "./common.module.css";
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.navListItem {
+  transition: color .4s ease;
+  display: flex;
+  align-items: center;
+  composes: hoverRed from "./common.module.css";
+}
+
+.hamburgerIcon {
+  display: block;
+}
+
+@media screen and (min-width:1025px) {
+  
+  .hamburgerIcon {
+    display: none;
+  }
+}

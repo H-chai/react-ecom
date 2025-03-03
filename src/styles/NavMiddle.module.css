@@ -1,0 +1,19 @@
+.headerNavMiddleList {
+  composes: noListStyle displayNone from "./common.module.css";
+  justify-content: center;
+  gap: 24px;
+  font-weight: 500;
+}
+
+.navMiddleLink {
+  transition: color .4s ease;
+  composes: hoverRed from "./common.module.css"
+}
+
+@media screen and (min-width:1025px) {
+
+  .headerNavMiddleList {
+    display: flex;
+  }
+
+}
