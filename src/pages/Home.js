@@ -7,7 +7,9 @@ import { useState, useEffect } from "react";
 
 export function Home() {
   const url = "https://v2.api.noroff.dev/online-shop";
-  const { data: products, isLoading, isError, tagsArray } = useApi(url);
+  const { data: products, isLoading, isError } = useApi(url);
+  const tags = products.map((d) => d.tags);
+  const tagsArray = [...new Set(tags.flat())];
   const [selectedCategories, setSelectedCategories] = useState([]);
   useEffect(() => {
     const queryString = selectedCategories.length
