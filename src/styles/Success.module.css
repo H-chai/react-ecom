@@ -1,0 +1,37 @@
+.pageContainer {
+  margin-top: 48px;
+  margin-bottom: 64px;
+  text-align: center;
+
+  img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.successMessage {
+  margin-top: 24px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.orderNumber {
+  margin: 0;
+
+  span {
+    color: #2B9B00;
+    font-weight: 700;
+  }
+}
+
+.orderMessage {
+  margin-top: 8px;
+  margin-bottom: 56px;
+}
+
+.backHome {
+  composes: ctaButton from "../styles/common.module.css";
+  display: block
+}
