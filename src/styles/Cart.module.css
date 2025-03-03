@@ -183,11 +183,14 @@
       width: 20%;
     }
   }
+
+  .cartTitle {
+    margin-bottom: 48px;
+  }
 }
 
 @media screen and (min-width:1025px) {
   .pageContainer {
-    margin-top: 56px;
     padding: 0 40px;
   }
 
@@ -203,7 +206,7 @@
 
   .totalGrid {
     grid-column: 8 / 13;
-    padding-left: 48px;
+    padding-left: 80px;
   }
 
   .cartItemContainer {

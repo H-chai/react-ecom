@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  gap: 56px;
 }
 
 .noListStyle {
@@ -70,7 +71,7 @@
   font-size: 14px;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 56px;
 
   svg {
     width: 18px;
@@ -101,6 +102,6 @@
   }
 
   .backHome {
-    margin-top: 64px;
+    margin-top: 96px;
   }
 }

@@ -1,5 +1,4 @@
 .homeContainer {
-  padding-top: 16px;
   padding-bottom: 64px;
   color: #333;
 }
@@ -155,10 +154,6 @@ h2 {
 }
 
 @media screen and (min-width:1025px) {
-  .homeContainer {
-    padding-top: 56px;
-    padding-bottom: 128px;
-  }
 
   .searchBarContainer {
     width: 50%;
