@@ -14,9 +14,11 @@ export function CheckoutSuccess() {
       <p className={styles.orderMessage}>
         Your order was successfully placed and is being prepared for delivery.
       </p>
-      <Link to="/" className={styles.backHome}>
-        Back to store
-      </Link>
+      <div className={styles.contentWidth}>
+        <Link to="/" className={styles.backHome}>
+          Back to store
+        </Link>
+      </div>
     </div>
   );
 }
