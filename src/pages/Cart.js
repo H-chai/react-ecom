@@ -3,18 +3,25 @@ import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import { useCartStore } from "../store/cartStore";
 import styles from "../styles/Cart.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import commonStyles from "../styles/common.module.css";
 
 export function Cart() {
-  const { cart, removeFromCart, addQuantity, subtractQuantity } =
+  const { cart, removeFromCart, addQuantity, subtractQuantity, clearCart } =
     useCartStore();
 
   const totalCost = cart.reduce(
     (total, item) => total + item.discountedPrice * item.quantity,
     0
   );
+
+  const navigate = useNavigate();
+
+  function checkout() {
+    clearCart();
+    navigate("/contact");
+  }
 
   return (
     <div className={styles.pageContainer}>
@@ -87,7 +94,9 @@ export function Cart() {
                 <h3>Total</h3>
                 <p className={styles.total}>${totalCost.toFixed(2)}</p>
               </div>
-              <button className={styles.checkout}>Checkout</button>
+              <button onClick={checkout} className={styles.checkout}>
+                Checkout
+              </button>
             </div>
           </div>
         )}
