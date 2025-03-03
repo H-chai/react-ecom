@@ -80,7 +80,11 @@ export function NavLeft() {
                 </Link>
               </li>
               <li>
-                <NavLink to="/contact" className={menuStyles.hamburgerMenuLink}>
+                <NavLink
+                  to="/contact"
+                  onClick={toggleHamburgerMenu}
+                  className={menuStyles.hamburgerMenuLink}
+                >
                   Contact
                 </NavLink>
               </li>
