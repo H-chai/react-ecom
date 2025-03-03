@@ -6,6 +6,7 @@ import styles from "../styles/Cart.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import commonStyles from "../styles/common.module.css";
+import EmptyCart from "../shopping-cart.png";
 
 export function Cart() {
   const { cart, removeFromCart, addQuantity, subtractQuantity, clearCart } =
@@ -28,7 +29,8 @@ export function Cart() {
       <h2 className={styles.cartTitle}>Cart</h2>
       <div>
         {cart.length === 0 ? (
-          <div>
+          <div className={styles.cartEmpty}>
+            <img src={EmptyCart} alt="empty cart" />
             <h3 className={styles.messageTitle}>
               Your shopping cart is empty.
             </h3>
