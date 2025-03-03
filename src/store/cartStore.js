@@ -79,4 +79,10 @@ export const useCartStore = create((set) => ({
         };
       }
     }),
+
+  clearCart: () =>
+    set(() => {
+      localStorage.setItem("cart", JSON.stringify([]));
+      return { cart: [] };
+    }),
 }));
