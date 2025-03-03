@@ -1,0 +1,53 @@
+.pageContainer {
+  text-align: center;
+
+  img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.successMessage {
+  margin-top: 24px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.orderNumber {
+  margin: 0;
+
+  span {
+    color: #2B9B00;
+    font-weight: 700;
+  }
+}
+
+.orderMessage {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.contentWidth {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.backHome {
+  composes: ctaButton from "../styles/common.module.css";
+  display: inline-block;
+}
+
+@media screen and (min-width:767px) {
+  .pageContainer {
+    img {
+      width: 20%;
+    }
+  }
+
+  .contentWidth {
+    width: 30%;
+    margin: 0 auto;
+  }
+}

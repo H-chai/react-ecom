@@ -66,7 +66,11 @@ export function NavLeft() {
           >
             <ul className={menuStyles.hamburgerMenuList}>
               <li className={menuStyles.hamburgerMenuListItem}>
-                <Link to="#" className={menuStyles.hamburgerMenuLink}>
+                <Link
+                  to="/"
+                  onClick={toggleHamburgerMenu}
+                  className={menuStyles.hamburgerMenuLink}
+                >
                   Shop
                 </Link>
               </li>

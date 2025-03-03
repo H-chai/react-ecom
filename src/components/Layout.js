@@ -5,7 +5,7 @@ import styles from "../styles/common.module.css";
 
 export function Layout() {
   return (
-    <div className={styles.layoutPadding}>
+    <div className={styles.layout}>
       <Header />
       <Outlet />
       <Footer />
