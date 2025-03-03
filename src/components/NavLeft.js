@@ -8,6 +8,7 @@ import styles from "../styles/NavLeft.module.css";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import menuStyles from "../styles/hamburgerMenu.module.css";
+import { useCartStore } from "../store/cartStore";
 
 export function NavLeft() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,10 @@ export function NavLeft() {
   function toggleHamburgerMenu() {
     setIsMenuOpen((prev) => !prev);
   }
+
+  const { cart } = useCartStore();
+  const totalItem = cart.reduce((total, item) => total + item.quantity, 0);
+  console.log(totalItem);
 
   return (
     <nav>
@@ -30,8 +35,13 @@ export function NavLeft() {
           </Link>
         </li>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navListItem}>
+          <NavLink to="/cart" className={styles.navListItem}>
             <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+            {totalItem > 0 ? (
+              <p className={styles.itemNumber}>{totalItem}</p>
+            ) : (
+              ""
+            )}
           </NavLink>
         </li>
         <li className={styles.hamburgerIcon}>
