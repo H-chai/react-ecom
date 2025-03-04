@@ -20,6 +20,35 @@ export function Home() {
 
   const [inputText, setInputText] = useState("");
 
+  const [isCategoryShown, setIsCategoryShown] = useState(false);
+  function toggleCategoryList() {
+    setIsCategoryShown((prev) => !prev);
+  }
+
+  const renderCategoryButtons = (tags) => {
+    return tags.map((tag) => (
+      <button
+        key={tag}
+        className={`${styles.categoryListItem} ${
+          selectedCategories.includes(tag) ? "active" : ""
+        }`}
+        onClick={onCategoryClick}
+      >
+        {tag}
+        {selectedCategories.includes(tag) && (
+          <CloseIcon
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedCategories((prevSelectedCategories) =>
+                prevSelectedCategories.filter((item) => item !== tag)
+              );
+            }}
+          ></CloseIcon>
+        )}
+      </button>
+    ));
+  };
+
   if (isLoading) {
     return <div>loading</div>;
   }
@@ -100,28 +129,16 @@ export function Home() {
           >
             All
           </Link>
-          {tagsArray.map((tag) => (
-            <button
-              key={tag}
-              className={`${styles.categoryListItem} ${
-                selectedCategories.includes(tag) ? "active" : ""
-              }`}
-              onClick={onCategoryClick}
-            >
-              {tag}
-              {selectedCategories.includes(tag) && (
-                <CloseIcon
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelectedCategories((prevSelectedCategories) =>
-                      prevSelectedCategories.filter((item) => item !== tag)
-                    );
-                  }}
-                ></CloseIcon>
-              )}
-            </button>
-          ))}
+          {renderCategoryButtons(
+            isCategoryShown ? tagsArray : tagsArray.slice(0, 6)
+          )}
         </ul>
+        <button
+          onClick={toggleCategoryList}
+          className={styles.categoryToggleButton}
+        >
+          {isCategoryShown ? "Show less" : "Show all"}
+        </button>
       </div>
       <div>
         {productsToDisplay.length === 0 ? (

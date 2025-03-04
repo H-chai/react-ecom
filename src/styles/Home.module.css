@@ -85,6 +85,15 @@ h2 {
   }
 }
 
+.categoryToggleButton {
+  border: none;
+  display: block;
+  margin: 8px 0 0 auto;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .productSection {
   display: grid;
   grid-template-columns: repeat(2, minmax(0px, 1fr));
