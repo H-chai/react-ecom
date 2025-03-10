@@ -104,7 +104,7 @@ This project uses the [Noroff API](https://v2.api.noroff.dev/online-shop) to fet
 
 #### Mobile
 
-<img src="screenshots/homepage-mobile.png" width="50％">
+<img src="screenshots/homepage-mobile.png" width="390px">
 
 ### Product Page
 
