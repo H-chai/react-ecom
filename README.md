@@ -86,13 +86,15 @@ This project uses the [Noroff API](https://v2.api.noroff.dev/online-shop) to fet
   ├── styles
   ├── App.js
   ├── index.js
+/public
+  ├── index.html
 ```
 
 ## Future Improvements
 
-- Implement user authentication
+- Implement user authentication (JWT)
 - Add payment gateway integration
-- Improve UI/UX design
+- Improve UI/UX design (Dark mode, better accessibility)
 
 ## Screenshots
 
