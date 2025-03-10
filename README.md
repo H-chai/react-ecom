@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# eCom Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is an e-commerce store built using React. The store allows users to browse products, view product details, add products to their cart, and complete a checkout process. Users can also contact the store via a contact form with validation.
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+[Deployed Application](https://reactecom-project.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- React Router
+- CSS Modules
+- Fetch API for retrieving product data
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Homepage**: Displays a list of products with a search bar for filtering.
+- **Product Page**: Shows details of a single product, including title, description, price, discount, and reviews.
+- **Shopping Cart**: Allows users to add, remove, and view items in their cart.
+- **Checkout Process**: Users can proceed to checkout and view a success message upon completion.
+- **Contact Page**: Contains a validated form for users to reach out.
 
-### `npm run build`
+## Highlights / Unique Implementations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Dynamic Discount Calculation**: Displays discounts when applicable.
+- **React Router for Navigation**: Smooth transitions between pages.
+- **LocalStorage Usage**: Cart data persists across sessions.
+- **Custom Styling**: Responsive design with CSS Modules.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/H-chai/react-ecom.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd react-ecom
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run start
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm run eject`
+## API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project uses the [Noroff API](https://v2.api.noroff.dev/online-shop) to fetch product data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Retrieve all products:
+  ```sh
+  GET https://v2.api.noroff.dev/online-shop
+  ```
+- Retrieve a single product by ID:
+  ```sh
+  GET https://v2.api.noroff.dev/online-shop/{productId}
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+/src
+  ├── components
+  │   ├── Header.js
+  │   ├── Footer.js
+  │   ├── NavLeft.js
+  │   ├── NavMiddle.js
+  │   └── Layout.js
+  ├── hooks
+  │   ├── useApi.js
+  ├── pages
+  │   ├── Home.js
+  │   ├── Product.js
+  │   ├── Cart.js
+  │   ├── CheckoutSuccess.js
+  │   └── Contact.js
+  ├── store
+  │   ├── cartStore.js
+  ├── styles
+  ├── App.js
+  ├── index.js
+```
 
-## Learn More
+## Future Improvements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Implement user authentication
+- Add payment gateway integration
+- Improve UI/UX design
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+### Homepage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Desktop
 
-### Analyzing the Bundle Size
+![Homepage](screenshots/homepage.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Mobile
 
-### Making a Progressive Web App
+![Homepage - Mobile](screenshots/homepage-mobile.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Product Page
 
-### Advanced Configuration
+#### Desktop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Product Page](screenshots/product-page.png)
 
-### Deployment
+#### Mobile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Product Page - Mobile](screenshots/product-page-mobile.png)
 
-### `npm run build` fails to minify
+### Shopping Cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Desktop
+
+![Shopping Cart](screenshots/cart.png)
+
+#### Mobile
+
+![Shopping Cart - Mobile](screenshots/cart-mobile.png)
