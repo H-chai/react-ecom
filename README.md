@@ -114,7 +114,7 @@ This project uses the [Noroff API](https://v2.api.noroff.dev/online-shop) to fet
 
 #### Mobile
 
-![Product Page - Mobile](screenshots/product-page-mobile.png)
+<img src="screenshots/product-page-mobile.png" width="390px">
 
 ### Shopping Cart
 
@@ -124,4 +124,4 @@ This project uses the [Noroff API](https://v2.api.noroff.dev/online-shop) to fet
 
 #### Mobile
 
-![Shopping Cart - Mobile](screenshots/cart-mobile.png)
+<img src="screenshots/cart-mobile.png" width="390px">
