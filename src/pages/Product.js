@@ -9,7 +9,7 @@ import commonStyles from "../styles/common.module.css";
 import { useCartStore } from "../store/cartStore";
 
 export function Product() {
-  let { id } = useParams();
+  const { id } = useParams();
   const url = `https://v2.api.noroff.dev/online-shop/${id}`;
   const { data, isLoading, isError } = useApi(url);
 
