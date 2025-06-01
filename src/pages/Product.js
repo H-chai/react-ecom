@@ -27,7 +27,7 @@ export function Product() {
     <div className={styles.productContainer}>
       <figure className={styles.figure}>
         <img src={data.image?.url} alt={data.image?.alt} />
-        <FavoriteBorderIcon className={styles.favorite}></FavoriteBorderIcon>
+        <FavoriteBorderIcon className={styles.favorite} />
       </figure>
       <div className={styles.productDetailContainer}>
         <div className={styles.titlePrice}>
@@ -50,7 +50,7 @@ export function Product() {
               <div className={styles.reviewer}>
                 <p className={styles.rating}>
                   {review.rating}
-                  <StarIcon></StarIcon>
+                  <StarIcon />
                 </p>
                 <p className={styles.reviewUsername}>{review.username}</p>
               </div>
@@ -59,7 +59,8 @@ export function Product() {
           ))}
         </div>
         <Link to="/" className={commonStyles.backHome}>
-          <KeyboardBackspaceIcon></KeyboardBackspaceIcon>See all products
+          <KeyboardBackspaceIcon />
+          See all products
         </Link>
       </div>
     </div>

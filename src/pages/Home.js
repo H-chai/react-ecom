@@ -43,7 +43,7 @@ export function Home() {
                 prevSelectedCategories.filter((item) => item !== tag)
               );
             }}
-          ></CloseIcon>
+          />
         )}
       </button>
     ));
@@ -98,7 +98,7 @@ export function Home() {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.searchBarContainer}>
-        <SearchIcon></SearchIcon>
+        <SearchIcon />
         <input
           type="text"
           value={inputText}
@@ -112,7 +112,7 @@ export function Home() {
               e.stopPropagation();
               setInputText("");
             }}
-          ></CloseIcon>
+          />
         ) : (
           ""
         )}

@@ -25,17 +25,17 @@ export function NavLeft() {
       <ul className={styles.headerNavLeftList}>
         <li className={styles.navListItem}>
           <Link to="#" className={styles.navListItem}>
-            <PersonOutlineOutlinedIcon></PersonOutlineOutlinedIcon>
+            <PersonOutlineOutlinedIcon />
           </Link>
         </li>
         <li className={styles.navListItem}>
           <Link to="#" className={styles.navListItem}>
-            <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
+            <FavoriteBorderOutlinedIcon />
           </Link>
         </li>
         <li className={styles.navListItem}>
           <NavLink to="/cart" className={styles.navListItem}>
-            <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+            <ShoppingCartOutlinedIcon />
             {totalItem > 0 ? (
               <p className={styles.itemNumber}>{totalItem}</p>
             ) : (
@@ -49,14 +49,14 @@ export function NavLeft() {
               className={commonStyles.button}
               onClick={toggleHamburgerMenu}
             >
-              <CloseIcon className={menuStyles.closeIcon}></CloseIcon>
+              <CloseIcon className={menuStyles.closeIcon} />
             </button>
           ) : (
             <button
               className={commonStyles.button}
               onClick={toggleHamburgerMenu}
             >
-              <MenuOutlinedIcon></MenuOutlinedIcon>
+              <MenuOutlinedIcon />
             </button>
           )}
           <nav

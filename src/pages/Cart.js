@@ -68,11 +68,11 @@ export function Cart() {
                       </div>
                       <div className={styles.quantity}>
                         <button onClick={() => subtractQuantity(product.id)}>
-                          <RemoveIcon></RemoveIcon>
+                          <RemoveIcon />
                         </button>
                         <p>{product.quantity}</p>
                         <button onClick={() => addQuantity(product.id)}>
-                          <AddIcon></AddIcon>
+                          <AddIcon />
                         </button>
                       </div>
                     </div>
@@ -80,7 +80,7 @@ export function Cart() {
                       onClick={() => removeFromCart(product.id)}
                       className={styles.removeButton}
                     >
-                      <CloseIcon></CloseIcon>
+                      <CloseIcon />
                     </button>
                   </div>
                 </div>
@@ -104,7 +104,8 @@ export function Cart() {
         )}
       </div>
       <Link to="/" className={commonStyles.backHome}>
-        <KeyboardBackspaceIcon></KeyboardBackspaceIcon>See all products
+        <KeyboardBackspaceIcon />
+        See all products
       </Link>
     </div>
   );
