@@ -35,8 +35,7 @@ export function Contact() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema), mode: "onSubmit" });
 
-  function onSubmit(data) {
-    console.log(data);
+  function onSubmit() {
     setMessage("Your message has been sent successfully!");
     reset();
   }
